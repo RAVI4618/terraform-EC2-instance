@@ -93,7 +93,7 @@ resource "aws_security_group" "my_security_group" {
   }
 }
 
-resource "aws_instance" "Ravi-master" {
+resource "aws_instance" "task1" {
   ami                    = "ami-05c179eced2eb9b5b"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.my_public_subnet.id
@@ -105,7 +105,7 @@ resource "aws_instance" "Ravi-master" {
   }
 }
 
-resource "aws_instance" "Ravi-worker" {
+resource "aws_instance" "task2" {
   ami                    = "ami-05c179eced2eb9b5b"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.my_public_subnet.id
