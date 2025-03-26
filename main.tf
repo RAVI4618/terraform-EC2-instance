@@ -94,11 +94,11 @@ resource "aws_security_group" "my_security_group" {
 }
 
 resource "aws_instance" "Ravi-master" {
-  ami                    = "ami-00bb6a80f01f03502"
+  ami                    = "ami-05c179eced2eb9b5b"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.my_public_subnet.id
   vpc_security_group_ids = [aws_security_group.my_security_group.id]
-  key_name               = "Ravi.pem"
+  key_name               = "demo"
 
   tags = {
     Name = "Ravi-Master"
@@ -106,11 +106,11 @@ resource "aws_instance" "Ravi-master" {
 }
 
 resource "aws_instance" "Ravi-worker" {
-  ami                    = "ami-00bb6a80f01f03502"
+  ami                    = "ami-05c179eced2eb9b5b"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.my_public_subnet.id
   vpc_security_group_ids = [aws_security_group.my_security_group.id]
-  key_name               = "Ravi.pem"
+  key_name               = "demo"
 
   tags = {
     Name = "Ravi-Worker"
