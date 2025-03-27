@@ -39,7 +39,7 @@ resource "aws_subnet" "my_public_subnet" {
   vpc_id            = aws_vpc.my_vpc.id
   cidr_block        = "10.0.1.0/24"
   map_public_ip_on_launch = true
-  availability_zone = "ap-south-1a" # Change if needed
+  availability_zone = "ap-south-1" # Change if needed
 
   tags = {
     Name = "My-Public-Subnet"
@@ -101,7 +101,7 @@ resource "aws_instance" "task1" {
   key_name               = "demo"
 
   tags = {
-    Name = "Ravi-Master"
+    Name = "task1"
   }
 }
 
@@ -113,6 +113,6 @@ resource "aws_instance" "task2" {
   key_name               = "demo"
 
   tags = {
-    Name = "Ravi-Worker"
+    Name = "task2"
   }
 }
